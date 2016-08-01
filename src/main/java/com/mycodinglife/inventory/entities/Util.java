@@ -5,8 +5,6 @@
  */
 package com.mycodinglife.inventory.entities;
 
-import com.google.gson.Gson;
-
 /**
  * Contains utility methods for use through the application.
  * @author jim
@@ -23,15 +21,5 @@ public class Util {
         }
         
         return text.trim();
-    }
-    
-    /**
-     * Creates a json string from an object.
-     * @param obj the object to serialize.
-     * @return a json string.
-     */
-    public static String getJson(Object obj) {
-        Gson serializer = new Gson();
-        return serializer.toJson(obj);
     }
 }
