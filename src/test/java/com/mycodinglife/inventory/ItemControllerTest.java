@@ -104,11 +104,9 @@ public class ItemControllerTest {
         try {
             int id = 7;
             this.controller.delete(id);
+            fail("This should not happen.");
         } catch (IndexOutOfBoundsException e) {
-            assertTrue(true);
-            return;
-        }
-        
-        fail("This should not happen.");
+            assertNotNull(e);
+        }  
     }
 }
